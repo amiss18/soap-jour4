@@ -1,6 +1,6 @@
 /vendor/
 
-
+/server/vendor/
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 npm-debug.log
