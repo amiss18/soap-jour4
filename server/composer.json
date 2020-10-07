@@ -1,0 +1,8 @@
+{
+  "name": "armel/soapj4",
+  "description": "soap server with php",
+  "type": "project",
+  "require": {
+    "php2wsdl/php2wsdl": "^0.6.1"
+  }
+}

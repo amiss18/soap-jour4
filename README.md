@@ -1,5 +1,5 @@
 
-Jour 4 - Partie 1: Web Service SOAP sans WSDL
+Jour 4 - Partie 2: Web Service SOAP avec WSDL
 ====================================
 
 Mise en place d'un serveur SOAP exposant des méthodes .
@@ -11,6 +11,11 @@ Requirements
 Installation
 ------------
 - Cloner le repo
+
+- se placer sur le dossier server pr installer les vendors via composer
+```bash
+composer install
+```
 
 
 
