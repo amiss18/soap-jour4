@@ -1,0 +1,8 @@
+# Installation du plugin pour exporter les slides en PDP
+
+$ npm install decktape
+$ `npm bin`/decktape
+
+# Génération du fichier index.html en PDF
+
+`npm bin`/decktape index.html slides.pdf

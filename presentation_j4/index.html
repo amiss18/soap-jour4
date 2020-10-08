@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Web services</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<style>
+			.row {
+				display: flex;
+			  }
+			  
+			  .column {
+				flex: 50%;
+			  }
+			  body{
+				  text-align: justify;
+			  }
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h4>PHP et services Web</h4>
+					
+					<ul>
+						<li>
+							Permettent aux aux applications de dialoguer à distance, et ceci indépendamment des plateformes et des langages sur lesquelles elles reposent
+						</li>
+						<li>
+							Communique en se basant sur le principe  de damandes et réponses(messages au format xml, json...)
+						</li>
+					</ul>
+				</section>
+					
+				
+				  	
+
+<section data-markdown="code/soap.md"  
+         data-separator="^\\n\\n\\n"  
+         data-separator-vertical="^\\n\\n"  
+		 data-separator-notes="^Note:"  
+		 data-charset="UTF-8">
+
+		
+</section>
+<section data-markdown="code/wsdl.md"  
+         data-separator="^\\n\\n\\n"  
+         data-separator-vertical="^\\n\\n"  
+		 data-separator-notes="^Note:"  
+		 data-charset="UTF-8">
+
+		
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+	   ### SOAP et PHP
+	   
+	   Créer un client SOAP
+	   ```php
+	   //le client reçoit en paramètre l'adresse du fichier wsdl
+	   $client = new SoapClient('http://api.radioreference.com/soap2/?wsdl&v=latest'); 
+	   $countries = $client->getCountryList();
+	   print_r($countries);
+	   ```
+	</textarea>
+  </section>
+
+  <section data-markdown>
+	<textarea data-template>
+	   ### Créer un serveur SOAP(Sans WSDL)
+	   
+	   ```php
+	   //instanciation du serveur SOAP
+	   $options = array("uri" => "http://localhost:8080" );
+		$server = new SoapServer(null, $options);
+		//nom de classe à exposter sur le server SOAP
+		$server->setClass('Events');
+		$server->handle();
+	   ```
+	</textarea>
+  </section>
+
+  <section data-markdown>
+	<textarea data-template>
+	  travaux pratiques
+	</textarea>
+  </section>
+
+
+				
+</div>
+</div>
+
+	
+
+		<script>
+			var cors = require('cors');
+
+// use it before all route definitions
+app.use(cors({origin: 'http://localhost:*'}));
+		</script>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
+				backgroundTransition: 'slide'
+			});
+		</script>
+	</body>
+</html>

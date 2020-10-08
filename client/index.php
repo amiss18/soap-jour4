@@ -3,10 +3,6 @@
  * Appel au Web service(sans WSDL) situé sur 'http://localhost:8080'
  */
 
-/**
- * Invocation simple à un Service WEB : la classe SoapClient() comporte des paramètres supplémentaires
- * qui seront intéressants à étudier dans la documentation
- */
 $options = ["location" => "http://localhost:8080", //url du web sercvice
 	"uri" => "http://localhost"
 ];
