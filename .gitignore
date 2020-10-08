@@ -1,5 +1,5 @@
 /vendor/
-
+/server/vendor/
 /presentation_j4/node_modules/
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
